@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Desi Daru | Country Liquor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1a0f05;
+      color: #fff;
+    }
+
+    header {
+      background: #3b1f0f;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background: #2a1408;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #f5c16c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: url("https://images.unsplash.com/photo-1604908177522-4327e76f7c6b") center/cover;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      color: #ffd27d;
+      background: rgba(0,0,0,0.6);
+      display: inline-block;
+      padding: 10px 20px;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #2b160a;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .card h3 {
+      color: #ffcc70;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    .contact {
+      background: #3b1f0f;
+    }
+
+    footer {
+      background: #140a04;
+      text-align: center;
+      padding: 10px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* Age Popup */
+    .age-popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .age-box {
+      background: #2b160a;
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      max-width: 300px;
+    }
+
+    .age-box button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .yes {
+      background: #28a745;
+      color: white;
+    }
+
+    .no {
+      background: #dc3545;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- AGE VERIFICATION -->
+<div class="age-popup" id="agePopup">
+  <div class="age-box">
+    <h2>🔞 Age Verification</h2>
+    <p>Are you 18+ years old?</p>
+    <button class="yes" onclick="allowSite()">Yes</button>
+    <button class="no" onclick="denySite()">No</button>
+  </div>
+</div>
+
+<header>DESI DARU</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+  <h1>Pure Desi Taste 🍶</h1>
+</div>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="products">
+    <div class="card">
+      <h3>Desi Tharra</h3>
+      <p>Traditional country liquor with strong punch.</p>
+    </div>
+    <div class="card">
+      <h3>Desi Whisky</h3>
+      <p>Smooth & bold Indian style whisky.</p>
+    </div>
+    <div class="card">
+      <h3>Desi Rum</h3>
+      <p>Dark, spicy and powerful.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Desi Daru represents the raw, authentic and traditional Indian liquor culture.
+    Made for those who love desi style.
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>📞 Phone: +91 XXXXXXXXXX</p>
+  <p>📍 Location: India</p>
+</section>
+
+<footer>
+  ⚠️ This website is for information purpose only. Alcohol consumption is injurious to health.
+</footer>
+
+<script>
+  function allowSite() {
+    document.getElementById("agePopup").style.display = "none";
+  }
+
+  function denySite() {
+    alert("You must be 18+ to view this site.");
+    window.location.href = "https://www.google.com";
+  }
+</script>
+
+</body>
+</html>
