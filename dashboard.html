@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard | Desi Daru</title>
+  <style>
+    body {
+      background:#1a0f05;
+      color:white;
+      font-family:Arial;
+      text-align:center;
+      padding-top:100px;
+    }
+    button {
+      padding:10px 20px;
+      background:#dc3545;
+      color:white;
+      border:none;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Welcome 🍺</h1>
+<p id="username"></p>
+<button onclick="logout()">Logout</button>
+
+<script>
+  if(localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+
+  let user = JSON.parse(localStorage.getItem("user"));
+  document.getElementById("username").innerText =
+    "Hello, " + user.name;
+
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>
